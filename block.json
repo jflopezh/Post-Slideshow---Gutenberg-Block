@@ -1,0 +1,38 @@
+{
+    "$schema": "https://json.schemastore.org/block.json",
+    "apiVersion": 2,
+    "name": "custom-block/post-slideshow",
+    "title": "Post Slideshow",
+    "category": "widgets",
+    "icon": "slides",
+    "description": "A great slideshow to display recent posts loaded from the WordPress API Rest of a given website.",
+    "keywords": [ "posts", "slider" ],
+    "version": "1.0.0",
+    "textdomain": "post-slideshow",
+    "attributes": {
+        "blockId": { "type": "string", "default": "" },
+        "postsWebsite": { "type": "string", "default": "https://wptavern.com/" },
+        "transitionDuration": { "type": "integer", "default": 500 },
+        "displayPagination": { "type": "boolean", "default": true },
+        "displayArrows": { "type": "boolean", "default": true },
+        "autoplay": { "type": "boolean", "default": true },
+        "autoplayInterval": { "type": "integer", "default": 500 },
+        "infiniteLoop": { "type": "boolean", "default": true },
+        "textColor": { "type": "string", "default": "#000" },
+        "bgColor": { "type": "string", "default": "#fff" },
+        "navColor": { "type": "string", "default": "#000" },
+        "headingLevel": { "type": "string", "default": "h2" },
+        "fontSize": { "type": "string", "default": "18px" },
+        "displayDate": { "type": "boolean", "default": true },
+        "displayExcerpt": { "type": "boolean", "default": true },
+        "displayButton": { "type": "boolean", "default": true }
+    },
+    "styles": [
+        { "name": "default", "label": "Default", "isDefault": true },
+        { "name": "other", "label": "Other" }
+    ],
+    "editorScript": "file:./scripts/index.js",
+    "script": "file:./scripts/script.js",
+    "editorStyle": "file:./styles/editor.css",
+    "style": "file:./styles/style.css"
+}

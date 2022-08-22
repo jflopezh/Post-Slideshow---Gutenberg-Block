@@ -1,0 +1,4 @@
+.wp-block-custom-block-post-slideshow .slides-wrapper .post-slide .slide-content {
+    width: calc(50% - 200px);
+    height: calc(100% - 200px);
+}
