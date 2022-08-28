@@ -116,7 +116,7 @@ class PostSlidewhow {
 
             // Listen for reseting slider on end for infinite loop
             if (this.infiniteLoop) {
-            this.slidesWrapper.addEventListener("transitionend", () => { this.checkReset() });
+                this.slidesWrapper.addEventListener("transitionend", () => { this.checkReset() });
             }
 
             // Keyboard navigation
@@ -164,7 +164,7 @@ class PostSlidewhow {
     slide(transition, touchMovement = 0) {
         if (transition) {
             let shorting = (touchMovement != 0) ? (touchMovement * this.transition) / this.size : 0;
-            this.slidesWrapper.style.transition = "transform " + Number(this.transition - shorting) + "ms ease-in-out";
+            this.slidesWrapper.style.transition = "transform " + Number(this.transition - Math.abs(shorting)) + "ms ease-in-out";
         } else {
             this.slidesWrapper.style.transition = "none";
         }
