@@ -353,12 +353,13 @@ class PostSlidewhow {
 }
 
 /**
- * Initializes and stores all the slideshows inside the document, I used an array 
- * in case of multiple instances of the block 
+ * Initializes and stores all the slideshows inside the page in case of multiple instances
  * */
-let postSlideshows = document.querySelectorAll(".wp-block-custom-block-post-slideshow");
-var slideshows = [];
+document.addEventListener("DOMContentLoaded", () => {
+    let postSlideshows = document.querySelectorAll(".wp-block-custom-block-post-slideshow");
+    var slideshows = [];
 
-postSlideshows.forEach(slideshow => {
-    slideshows.push(new PostSlidewhow(slideshow));
+    postSlideshows.forEach(slideshow => {
+        slideshows.push(new PostSlidewhow(slideshow));
+    });
 });

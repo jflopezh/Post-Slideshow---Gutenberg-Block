@@ -50,7 +50,7 @@
             return (
                 el("div", {},
 
-                    // Render block controls on the editor
+                    // Render block controls in the editor
                     el(InspectorControls, {}, 
                         el(Panel, {},
                             el(PanelBody, { title: __("Slideshow Settings", "post-slideswhow") }, 
@@ -191,7 +191,7 @@
                         )
                     ),
 
-                    // Reden block preview
+                    // Render block preview in the editor
                     el("div", { 
                         ...useBlockProps(),
                         id: attr.blockId,
@@ -247,10 +247,11 @@
          * Render the basic skeleton of the slider and pass slideshow
          * behavior settings as data attributes to the front end. The
          * save function won't render functionalities or dynamic content,
-         * this callback is used to generate pure HTML to be rendered on the front.
+         * this callback is used to generate pure HTML to save it in WP database
+         * and to be rendered in the front.
          * 
          * According to the above, for slideshow functionality and posts loading,
-         * I enqueued a front-end script in the block.json configuration. 
+         * There is a front-end script enqueued in the block.json configuration. 
          */
         save: (props) => {
             const attr = props.attributes;
